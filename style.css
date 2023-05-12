@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* grid-template-columns: el numero de columna que se desean en el grid
+25% 25% 25% 25% Se puede realizar por medio de porcentajes de cad uno pero toma mucho tiempo, por tanto se puede manejar por fraccciones = 1Fr. 
+Ej. 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr (nueve columnas del mismo tamaño)
+*/
+/* la fraccion se establece mientras que el papa ya tenga altura o ancho establecido, en este caso el ancho es el 100% pero no tiene altura definida, por lo que se tiene que agregar o manejarlo con medida en pixeles */
+/* Propiedades de la caja hijo:
+grid-column-start:1
+Grid-column-end:3
+grid-column: 1/3 (se resumen el inicio y el final)
+*/
+.container{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+   /*  grid-auto-rows: repeat(3,200px) */
+   gap: 1rem;
+   /* el ga te da el espacio entre las columnas */
+   /* column-gap: solo direccionado a la columna;
+   row-gap:  solo direcciona las filas; */
+    width: 100%;
+    background-color: blueviolet;
+    height: 100vh;
+}
+
+.item{
+    
+    background-color: rgb(151, 106, 194);
+    border: 2px solid wheat;
+}
+
+.uno{
+    grid-column: 1/3;
+}
+/* para aumentar el tamaño de cada una de las cajas se colocan el comando grid-column y se coloca los sitios que quieres que tome. */
+.siete{
+    grid-column: 1/4;
+}
+.cuatro{
+    align-items: center;
+    justify-content: center;
+}
+.tres{grid-row: 2/4;background-color: tomato;}
+
+.seis{grid-column: 2/4;}
+
+.imagen1{
+    border-radius: 50px;
+}
